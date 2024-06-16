@@ -1,0 +1,7 @@
+version: "2"
+sql:
+  - queries: "sql"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/dbserarchquires"

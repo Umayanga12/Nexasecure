@@ -1,0 +1,17 @@
+# Use the official Rust image
+FROM rust:1.63
+
+# Set the Current Working Directory inside the container
+WORKDIR /app
+
+# Copy the source from the current directory to the Working Directory inside the container
+COPY . .
+
+# Build the Rust app
+RUN cargo build --release
+
+# Expose port 7878 to the outside world
+EXPOSE 7878
+
+# Command to run the executable
+CMD ["./target/release/db"]

@@ -1,0 +1,9 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\microservice_router\target\debug\deps\libzstd_sys-45b838f145973f79.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zstd.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zdict.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\microservice_router\target\debug\deps\libzstd_sys-45b838f145973f79.rlib: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zstd.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zdict.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\microservice_router\target\debug\deps\zstd_sys-45b838f145973f79.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zstd.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zdict.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zstd.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.10+zstd.1.5.6\src\bindings_zdict.rs:

@@ -1,0 +1,35 @@
+# Stage 1: Build the application
+FROM rust:latest as builder
+
+# Create a new empty shell project
+RUN USER=root cargo new --bin router-server
+WORKDIR /router-server
+
+# Copy the source code into the container
+COPY ./Cargo.toml ./Cargo.toml
+COPY ./Cargo.lock ./Cargo.lock
+
+# Build dependencies first (this is a Docker cache optimization)
+RUN cargo build --release
+RUN rm src/*.rs
+
+# Copy the source code and build the application
+COPY ./src ./src
+RUN cargo build --release
+
+# Stage 2: Create a smaller image with the binary
+FROM debian:buster-slim
+
+# Install necessary dependencies
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy the compiled binary from the build stage
+COPY --from=builder /router-server/target/release/router-server /usr/local/bin/
+
+# Expose the port that the application will run on
+EXPOSE 8080
+
+# Run the binary
+CMD ["router-server"]
