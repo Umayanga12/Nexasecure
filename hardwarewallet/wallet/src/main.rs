@@ -1,11 +1,11 @@
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
 use serde::{Deserialize, Serialize};
 use std::fs::{self, OpenOptions};
-use std::io::Write;
+use std::io::{Write, Read};
 use reqwest::Client;
 
 #[derive(Serialize, Deserialize)]
-struct walletdata {
+struct MyData {
     key: String,
     value: String,
 }
@@ -43,9 +43,24 @@ async fn delete_file() -> impl Responder {
     }
 }
 
+async fn read_file() -> impl Responder {
+    let file_path = "data.json";
+    let mut file = match OpenOptions::new().read(true).open(file_path) {
+        Ok(file) => file,
+        Err(_) => return HttpResponse::NotFound().body("File not found"),
+    };
+
+    let mut contents = String::new();
+    if file.read_to_string(&mut contents).is_ok() {
+        HttpResponse::Ok().body(contents)
+    } else {
+        HttpResponse::InternalServerError().body("Failed to read file")
+    }
+}
+
 async fn external_api() -> impl Responder {
     let client = Client::new();
-    let res = client.get("https://api.example.com/data")
+    let res = client.get("http://127.0.0.1:3030")
         .send()
         .await;
 
@@ -65,9 +80,10 @@ async fn main() -> std::io::Result<()> {
             .route("/create", web::post().to(create_file))
             .route("/update", web::put().to(update_file))
             .route("/delete", web::delete().to(delete_file))
+            .route("/read", web::get().to(read_file))
             .route("/external-api", web::get().to(external_api))
     })
-    .bind("127.0.0.1:8080")?
+    .bind("127.0.0.1:3031")?
     .run()
     .await
 }
