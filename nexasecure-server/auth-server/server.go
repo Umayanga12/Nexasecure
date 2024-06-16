@@ -129,35 +129,37 @@ func HandlerLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var creds Credentials
-	err := json.NewDecoder(r.Body).Decode(&creds)
-	if err != nil {
-		http.Error(w, "Invalid request payload", http.StatusBadRequest)
-		return
-	}
-
-	user, err := getUserByUsername(creds.Username)
-	if err != nil {
-		if err == sql.ErrNoRows {
-			http.Error(w, "Invalid credentials", http.StatusUnauthorized)
-
-		} else {
-			http.Error(w, "Database error", http.StatusInternalServerError)
-			fmt.Println("Error querying database for user:", err)
+	if checkServer("http://127.0.0.1:3031") {
+		var creds Credentials
+		err := json.NewDecoder(r.Body).Decode(&creds)
+		if err != nil {
+			http.Error(w, "Invalid request payload", http.StatusBadRequest)
+			return
 		}
-		return
-	}
 
-	// Compare the stored password hash with the password sent in the request
-	if user.Password != creds.Password {
-		http.Error(w, "Invalid credentials", http.StatusUnauthorized)
-		responseWithJSON(w, http.StatusUnauthorized, map[string]string{"error": "Invalid credentials"})
-		return
-	}
+		user, err := getUserByUsername(creds.Username)
+		if err != nil {
+			if err == sql.ErrNoRows {
+				http.Error(w, "Invalid credentials", http.StatusUnauthorized)
 
-	// If credentials are valid, return success response (you can set cookies, JWT tokens, etc.)
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Login successful"))
+			} else {
+				http.Error(w, "Database error", http.StatusInternalServerError)
+				fmt.Println("Error querying database for user:", err)
+			}
+			return
+		}
+
+		// Compare the stored password hash with the password sent in the request
+		if user.Password != creds.Password {
+			http.Error(w, "Invalid credentials", http.StatusUnauthorized)
+			responseWithJSON(w, http.StatusUnauthorized, map[string]string{"error": "Invalid credentials"})
+			return
+		}
+
+		// If credentials are valid, return success response (you can set cookies, JWT tokens, etc.)
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("Login successful"))
+	}
 }
 
 func extractTokenFromRequest(r *http.Request) string {
@@ -299,4 +301,17 @@ func getUserByUsername(usern string) (User, error) {
 		return User{}, err
 	}
 	return user, nil
+}
+
+func checkServer(url string) bool {
+	walletServer := http.Client{
+		Timeout: 5 * time.Second,
+	}
+
+	responce, err := walletServer.Get(url)
+	if err != nil {
+		return false
+	}
+	defer responce.Body.Close()
+	return responce.StatusCode == http.StatusOK
 }
