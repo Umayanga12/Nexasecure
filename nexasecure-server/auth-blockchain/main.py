@@ -18,21 +18,25 @@ app = Flask(__name__)
 mongoClient = MongoClient('mongodb://localhost:27017/')
 database = mongoClient['ownership-token-db']
 
-
 @app.route('/login', methods=['POST'])
 def login():
     data = flask.request.get_json()
-    required = ['username', 'uuid']
+    required = ['username', 'uuid','ownership_token']
     if not all(k in data for k in required):
         return 'Missing values', 400
     
-    index = Blockchain.new_auth_request(data['username'],data['uuid'])
-    authenticated = AuthenticationSystem.authenticate(data['username'],data['username'])
-    if authenticated:
-        Wallet.transfer_DOT(index,"company")
-        sinded_auth = Wallet.sign_auth_data(index)
-        return sinded_auth,200
-    return False
+    facialrec = request.get("http://localhost:5000/validation",json={"id":data['uuid']})
+    if facialrec:
+        index = Blockchain.new_auth_request(data['username'],data['uuid'])
+        authenticated = AuthenticationSystem.authenticate(data['username'],data['username'])
+        if authenticated:
+            Wallet.transfer_DOT(index,"company")
+            sinded_auth = Wallet.sign_auth_data(index)
+            return sinded_auth,200
+        return True
+    else:
+        return False
+    
 
 @app.route('/logout', methods=['POST'])
 def logout():
