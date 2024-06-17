@@ -5,12 +5,13 @@ use std::io::{Write, Read};
 use reqwest::Client;
 
 #[derive(Serialize, Deserialize)]
-struct MyData {
-    key: String,
-    value: String,
+struct WalletData {
+    uuid: String,
+    dip: String,
+    token: String,
 }
 
-async fn create_file(data: web::Json<MyData>) -> impl Responder {
+async fn create_file(data: web::Json<WalletData>) -> impl Responder {
     let file_path = "data.json";
     let json_data = serde_json::to_string(&data.into_inner()).unwrap();
     let mut file = OpenOptions::new()
@@ -22,7 +23,7 @@ async fn create_file(data: web::Json<MyData>) -> impl Responder {
     HttpResponse::Ok().body("File created")
 }
 
-async fn update_file(data: web::Json<MyData>) -> impl Responder {
+async fn update_file(data: web::Json<WalletData>) -> impl Responder {
     let file_path = "data.json";
     let json_data = serde_json::to_string(&data.into_inner()).unwrap();
     let mut file = OpenOptions::new()
@@ -69,7 +70,7 @@ async fn external_api() -> impl Responder {
             let body = response.text().await.unwrap();
             HttpResponse::Ok().body(body)
         },
-        Err(_) => HttpResponse::InternalServerError().body("Failed to communicate with the API"),
+        Err(_) => HttpResponse::InternalServerError().body("Error memory dose not responding"),
     }
 }
 
