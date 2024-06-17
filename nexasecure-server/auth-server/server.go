@@ -159,6 +159,10 @@ func HandlerLogin(w http.ResponseWriter, r *http.Request) {
 		// If credentials are valid, return success response (you can set cookies, JWT tokens, etc.)
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("Login successful"))
+	} else {
+		http.Error(w, "User Varification fail", http.StatusInternalServerError)
+		responseWithJSON(w, http.StatusInternalServerError, map[string]string{"error": "Wallet server is offline"})
+		return
 	}
 }
 
