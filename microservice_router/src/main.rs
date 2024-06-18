@@ -74,3 +74,6 @@ async fn main() {
     info!("Starting server at http://127.0.0.1:8080");
     create_server(config).await.unwrap();
 }
+
+//if the user is authenticated then pass to another microservice
+//if not rout to authentication service

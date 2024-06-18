@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -113,6 +114,9 @@ func HandlerError(w http.ResponseWriter, r *http.Request) {
 type Credentials struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
+	id string `json:"uuid"
+	dip string `json:"dip"`
+	token string	`json:"token"`
 }
 
 type User struct {
@@ -156,9 +160,62 @@ func HandlerLogin(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		// If credentials are valid, return success response (you can set cookies, JWT tokens, etc.)
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Login successful"))
+		//facial recognition 
+		isvalid = validator(creds.id)
+		if isvalid {
+			//need to go to call fro request token db and get the token
+			request_token_url := "http://127.0.0.1:8085/pass"
+			token,err := http.Get(request_token_url)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			} 
+			defer token.Body.Close()
+
+			if responce.StatusCode != http.StatusOK {
+				http.Error(w, fmt.Sprintf("Error while passing the request token : %s", responce.Status), responce.StatusCode)
+				return
+			}
+
+			body,err := ioutil.ReadAll(responce.Body)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+			//store the token in hardware wallet - db 
+			resp, err := http.Post("http://127.0.0.1:3030/tokens", "application/json", bytes.NewBuffer())
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+
+			defer resp.Body.Close()
+
+			if resp.StatusCode != http.StatusOK {
+				http.Error(w, "Failed to add token", resp.StatusCode)
+				return
+			}
+		
+			fmt.Fprintf(w, "Token added successfully")
+			// If credentials are valid, return success response 
+			//adding to blcokchain
+			addblock,err := http.Post("http://127.0.0.1:8088/addBlock", "application/json", bytes.NewBuffer(jsonToken))
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+
+			defer addblock.Body.Close()
+
+			w.WriteHeader(http.StatusOK)
+			w.Write([]byte("Login successful"))
+		}
+		else{
+			http.Error(w, "User Varification fail", http.StatusInternalServerError)
+			responseWithJSON(w, http.StatusInternalServerError, map[string]string{"error": "User Varification fail"})
+			return
+		}
+		
 	} else {
 		http.Error(w, "User Varification fail", http.StatusInternalServerError)
 		responseWithJSON(w, http.StatusInternalServerError, map[string]string{"error": "Wallet server is offline"})
@@ -256,6 +313,7 @@ func IsTokenInvalid(token string) bool {
 }
 
 func HandlerLogout(w http.ResponseWriter, r *http.Request) {
+	//return token for the hardware system 
 	token := extractTokenFromRequest(r) // Implement function to extract token from request
 
 	if token != "" {
@@ -318,4 +376,29 @@ func checkServer(url string) bool {
 	}
 	defer responce.Body.Close()
 	return responce.StatusCode == http.StatusOK
+}
+
+func validator(w http.ResponseWriter, _ *http.Request) {
+	APIURL := "http://localhost:5000/validation" // Replace with the actual external API URL
+
+	resp, err := http.Get(APIURL)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		http.Error(w, fmt.Sprintf("Error from external API: %s", resp.Status), resp.StatusCode)
+		return
+	}
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(body)
 }

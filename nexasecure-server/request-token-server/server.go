@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 
@@ -14,9 +15,10 @@ import (
 
 var client *mongo.Client
 
+// Function to connect to MongoDB
 func connectToMongoDB() {
 	var err error
-	clientOptions := options.Client().ApplyURI("mongodb://localhost:27019")
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
 	client, err = mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
 		log.Fatal(err)
@@ -27,9 +29,10 @@ func connectToMongoDB() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Connected to DB!")
+	fmt.Println("Connected to MongoDB!")
 }
 
+// Handler to read documents from MongoDB
 func readHandler(w http.ResponseWriter, r *http.Request) {
 	collection := client.Database("testdb").Collection("testcollection")
 
@@ -56,9 +59,11 @@ func readHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(results)
 }
 
+// Handler to update a document in MongoDB
 func updateHandler(w http.ResponseWriter, r *http.Request) {
 	collection := client.Database("testdb").Collection("testcollection")
 
@@ -79,18 +84,46 @@ func updateHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(updateResult)
+}
+
+// Handler to make a request to an external API
+func externalAPIHandler(w http.ResponseWriter, r *http.Request) {
+	externalAPIURL := "https://api.example.com/data" // Replace with the actual external API URL
+
+	resp, err := http.Get(externalAPIURL)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		http.Error(w, fmt.Sprintf("Error from external API: %s", resp.Status), resp.StatusCode)
+		return
+	}
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(body)
 }
 
 func main() {
 	// Connect to MongoDB
 	connectToMongoDB()
 
-	// Set up handlers for read and update
+	// Set up handlers for read, update, and external API call
 	http.HandleFunc("/read", readHandler)
-	http.HandleFunc("/update", updateHandler)
+	http.HandleFunc("/pass", updateHandler)
+	http.HandleFunc("/external", externalAPIHandler)
 
 	// Start the server
 	fmt.Println("Server is running on port 8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8085", nil))
 }
