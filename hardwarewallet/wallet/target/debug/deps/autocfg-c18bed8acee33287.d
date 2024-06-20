@@ -1,0 +1,10 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libautocfg-c18bed8acee33287.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\error.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\rustc.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\version.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libautocfg-c18bed8acee33287.rlib: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\error.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\rustc.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\version.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\autocfg-c18bed8acee33287.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\error.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\rustc.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\version.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\error.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\rustc.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\autocfg-1.3.0\src\version.rs:

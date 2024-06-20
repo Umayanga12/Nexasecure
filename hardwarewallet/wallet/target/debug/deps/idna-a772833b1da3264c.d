@@ -1,0 +1,10 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libidna-a772833b1da3264c.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\punycode.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46_mapping_table.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libidna-a772833b1da3264c.rlib: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\punycode.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46_mapping_table.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\idna-a772833b1da3264c.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\punycode.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46_mapping_table.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\punycode.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\idna-0.5.0\src\uts46_mapping_table.rs:

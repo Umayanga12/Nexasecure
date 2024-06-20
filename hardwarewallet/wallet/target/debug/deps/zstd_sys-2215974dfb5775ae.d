@@ -1,0 +1,9 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libzstd_sys-2215974dfb5775ae.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zstd.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zdict.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libzstd_sys-2215974dfb5775ae.rlib: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zstd.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zdict.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\zstd_sys-2215974dfb5775ae.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zstd.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zdict.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zstd.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\zstd-sys-2.0.11+zstd.1.5.6\src\bindings_zdict.rs:
