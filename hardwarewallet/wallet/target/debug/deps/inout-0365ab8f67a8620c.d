@@ -1,0 +1,11 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libinout-0365ab8f67a8620c.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\errors.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout_buf.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\reserved.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libinout-0365ab8f67a8620c.rlib: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\errors.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout_buf.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\reserved.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\inout-0365ab8f67a8620c.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\errors.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout_buf.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\reserved.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\errors.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\inout_buf.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\inout-0.1.3\src\reserved.rs:

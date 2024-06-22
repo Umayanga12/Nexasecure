@@ -23,7 +23,7 @@ HOST_CFLAGS = None
 cargo:rerun-if-env-changed=CFLAGS
 CFLAGS = None
 cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
-cargo:warning=Compiler family detection failed due to error: ToolExecError: Command "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe" "-E" "E:\\OneDrive\\Second Year\\semester 2\\Research\\Application Development\\Authenticaion server\\hardwarewallet\\wallet\\target\\debug\\build\\zstd-sys-4b90303e00eb6b8b\\out\\8818069897835057002detect_compiler_family.c" with args C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe did not execute successfully (status code exit code: 2).
+cargo:warning=Compiler family detection failed due to error: ToolExecError: Command "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe" "-E" "E:\\OneDrive\\Second Year\\semester 2\\Research\\Application Development\\Authenticaion server\\hardwarewallet\\wallet\\target\\debug\\build\\zstd-sys-4b90303e00eb6b8b\\out\\4814069577345442900detect_compiler_family.c" with args C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe did not execute successfully (status code exit code: 2).
 cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
 CRATE_CC_NO_DEFAULTS = None
 CARGO_CFG_TARGET_FEATURE = Some("cmpxchg16b,fxsr,sse,sse2,sse3")
@@ -36,7 +36,7 @@ HOST_CFLAGS = None
 cargo:rerun-if-env-changed=CFLAGS
 CFLAGS = None
 cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
-cargo:warning=Compiler family detection failed due to error: ToolExecError: Command "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe" "-E" "E:\\OneDrive\\Second Year\\semester 2\\Research\\Application Development\\Authenticaion server\\hardwarewallet\\wallet\\target\\debug\\build\\zstd-sys-4b90303e00eb6b8b\\out\\1848079740710444549detect_compiler_family.c" with args C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe did not execute successfully (status code exit code: 2).
+cargo:warning=Compiler family detection failed due to error: ToolExecError: Command "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe" "-E" "E:\\OneDrive\\Second Year\\semester 2\\Research\\Application Development\\Authenticaion server\\hardwarewallet\\wallet\\target\\debug\\build\\zstd-sys-4b90303e00eb6b8b\\out\\17272420261884368497detect_compiler_family.c" with args C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe did not execute successfully (status code exit code: 2).
 cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
 CRATE_CC_NO_DEFAULTS = None
 CARGO_CFG_TARGET_FEATURE = Some("cmpxchg16b,fxsr,sse,sse2,sse3")
@@ -49,7 +49,7 @@ HOST_CFLAGS = None
 cargo:rerun-if-env-changed=CFLAGS
 CFLAGS = None
 cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
-cargo:warning=Compiler family detection failed due to error: ToolExecError: Command "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe" "-E" "E:\\OneDrive\\Second Year\\semester 2\\Research\\Application Development\\Authenticaion server\\hardwarewallet\\wallet\\target\\debug\\build\\zstd-sys-4b90303e00eb6b8b\\out\\7933188860446258016detect_compiler_family.c" with args C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe did not execute successfully (status code exit code: 2).
+cargo:warning=Compiler family detection failed due to error: ToolExecError: Command "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe" "-E" "E:\\OneDrive\\Second Year\\semester 2\\Research\\Application Development\\Authenticaion server\\hardwarewallet\\wallet\\target\\debug\\build\\zstd-sys-4b90303e00eb6b8b\\out\\18089124917002581279detect_compiler_family.c" with args C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe did not execute successfully (status code exit code: 2).
 cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
 CRATE_CC_NO_DEFAULTS = None
 CARGO_CFG_TARGET_FEATURE = Some("cmpxchg16b,fxsr,sse,sse2,sse3")
@@ -64,10 +64,10 @@ CFLAGS = None
 cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
 debug.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 entropy_common.c
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 error_private.c
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 fse_decompress.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 pool.c
@@ -95,22 +95,22 @@ zstd_compress.c
 exit code: cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_compress_literals.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_compress_sequences.c
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_compress_superblock.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_double_fast.c
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_fast.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_lazy.c
-zstd_ldm.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
+zstd_ldm.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_opt.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstdmt_compress.c
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 0
 exit code: 0
 exit code: 0
@@ -125,16 +125,16 @@ huf_decompress.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_ddict.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_decompress.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_decompress_block.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 cover.c
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 divsufsort.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-fastcover.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
+fastcover.c
 zdict.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_v01.c
@@ -148,18 +148,18 @@ exit code: 0
 exit code: 0
 exit code: 0
 exit code: 0
-zstd_v02.c
 exit code: cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-zstd_v03.c
+zstd_v02.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
+zstd_v03.c
 zstd_v04.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_v05.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_v06.c
 cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
-cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 zstd_v07.c
+cargo:warning=cl : Command line warning D9002 : ignoring unknown option '-fvisibility=hidden'
 0
 exit code: 0
 exit code: 0

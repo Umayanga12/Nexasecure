@@ -1,0 +1,10 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libactix_codec-8abec6292ac657a4.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\bcodec.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\framed.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lines.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\libactix_codec-8abec6292ac657a4.rlib: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\bcodec.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\framed.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lines.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\hardwarewallet\wallet\target\debug\deps\actix_codec-8abec6292ac657a4.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\bcodec.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\framed.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lines.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\bcodec.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\framed.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\actix-codec-0.5.2\src\lines.rs:

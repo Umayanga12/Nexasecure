@@ -112,115 +112,69 @@ func HandlerError(w http.ResponseWriter, r *http.Request) {
 }
 
 type Credentials struct {
-	Username string `json:"username"`
-	Password string `json:"password"`
-	id string `json:"uuid"
-	dip string `json:"dip"`
-	token string	`json:"token"`
+	Username string
+	Password string
+	id       string
+	dip      string
+	token    string
 }
 
 type User struct {
-	uniqueid uuid.UUID `json:"uniqueid"`
-	Username string    `json:"username"`
-	Password string    `json:"password"`
+	uniqueid uuid.UUID
+	Username string
+	Password string
 	// Add more fields as needed
 }
 
 func HandlerLogin(w http.ResponseWriter, r *http.Request) {
-
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
 
-	if checkServer("http://127.0.0.1:3031") {
-		var creds Credentials
-		err := json.NewDecoder(r.Body).Decode(&creds)
+	if checkServer("http://127.0.0.1:3031") && checkServer("http://127.0.0.1:3030") {
+		var credintials Credentials
+		err := json.NewDecoder(r.Body).Decode(&credintials)
 		if err != nil {
-			http.Error(w, "Invalid request payload", http.StatusBadRequest)
+			http.Error(w, "Invalid request Payload", http.StatusBadRequest)
 			return
 		}
 
-		user, err := getUserByUsername(creds.Username)
-		if err != nil {
-			if err == sql.ErrNoRows {
-				http.Error(w, "Invalid credentials", http.StatusUnauthorized)
-
-			} else {
-				http.Error(w, "Database error", http.StatusInternalServerError)
-				fmt.Println("Error querying database for user:", err)
-			}
+		user, error := getUserByUsername(credintials.Username)
+		if error != sql.ErrNoRows {
+			http.Error(w, "Invalid Credintials", http.StatusUnauthorized)
+			return
+		} else {
+			http.Error(w, "Database Error", http.StatusInternalServerError)
+			fmt.Println("Error querying database for user : ", user)
 			return
 		}
 
-		// Compare the stored password hash with the password sent in the request
-		if user.Password != creds.Password {
+		if user.Password != credintials.Password {
 			http.Error(w, "Invalid credentials", http.StatusUnauthorized)
 			responseWithJSON(w, http.StatusUnauthorized, map[string]string{"error": "Invalid credentials"})
 			return
 		}
 
-		//facial recognition 
-		isvalid = validator(creds.id)
-		if isvalid {
-			//need to go to call fro request token db and get the token
-			request_token_url := "http://127.0.0.1:8085/pass"
-			token,err := http.Get(request_token_url)
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			} 
-			defer token.Body.Close()
+		isValid = validator(credintials.id)
+		if isValid {
+			//change the Token ownership
 
-			if responce.StatusCode != http.StatusOK {
-				http.Error(w, fmt.Sprintf("Error while passing the request token : %s", responce.Status), responce.StatusCode)
-				return
-			}
+			//add to blockchain
 
-			body,err := ioutil.ReadAll(responce.Body)
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			}
-			//store the token in hardware wallet - db 
-			resp, err := http.Post("http://127.0.0.1:3030/tokens", "application/json", bytes.NewBuffer())
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			}
+			//offer the new  token
 
-			defer resp.Body.Close()
+			//store the token in hardware wallet - db
 
-			if resp.StatusCode != http.StatusOK {
-				http.Error(w, "Failed to add token", resp.StatusCode)
-				return
-			}
-		
-			fmt.Fprintf(w, "Token added successfully")
-			// If credentials are valid, return success response 
-			//adding to blcokchain
-			addblock,err := http.Post("http://127.0.0.1:8088/addBlock", "application/json", bytes.NewBuffer(jsonToken))
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			}
+			//add to the blcokchain
 
-			defer addblock.Body.Close()
-
-			w.WriteHeader(http.StatusOK)
-			w.Write([]byte("Login successful"))
+			//return
 		}
-		else{
-			http.Error(w, "User Varification fail", http.StatusInternalServerError)
-			responseWithJSON(w, http.StatusInternalServerError, map[string]string{"error": "User Varification fail"})
-			return
-		}
-		
+
 	} else {
-		http.Error(w, "User Varification fail", http.StatusInternalServerError)
-		responseWithJSON(w, http.StatusInternalServerError, map[string]string{"error": "Wallet server is offline"})
-		return
+		http.Error(w, "Connect the hardware wallet", http.StatusUnauthorized)
 	}
+
 }
 
 func extractTokenFromRequest(r *http.Request) string {
@@ -313,7 +267,7 @@ func IsTokenInvalid(token string) bool {
 }
 
 func HandlerLogout(w http.ResponseWriter, r *http.Request) {
-	//return token for the hardware system 
+	//return token for the hardware system
 	token := extractTokenFromRequest(r) // Implement function to extract token from request
 
 	if token != "" {
@@ -402,3 +356,5 @@ func validator(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(body)
 }
+
+func AddUser() {}
