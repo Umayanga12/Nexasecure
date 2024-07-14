@@ -1,0 +1,5 @@
+CREATE TABLE accounts (
+  id SERIAL PRIMARY KEY,
+  address VARCHAR(100) UNIQUE NOT NULL,
+  status VARCHAR(10) NOT NULL
+);

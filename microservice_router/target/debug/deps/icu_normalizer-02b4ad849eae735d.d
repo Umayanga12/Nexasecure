@@ -1,0 +1,9 @@
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\microservice_router\target\debug\deps\libicu_normalizer-02b4ad849eae735d.rmeta: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\error.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\properties.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\provider.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\uts46.rs
+
+E:\OneDrive\Second Year\semester 2\Research\Application Development\Authenticaion server\microservice_router\target\debug\deps\icu_normalizer-02b4ad849eae735d.d: C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\lib.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\error.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\properties.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\provider.rs C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\uts46.rs
+
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\lib.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\error.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\properties.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\provider.rs:
+C:\Users\umaya\.cargo\registry\src\index.crates.io-6f17d22bba15001f\icu_normalizer-1.5.0\src\uts46.rs:

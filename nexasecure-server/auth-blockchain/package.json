@@ -1,0 +1,33 @@
+{
+  "name": "auth-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.6",
+    "@truffle/contract": "^4.6.31",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "express": "^4.19.2",
+    "solc": "^0.8.26",
+    "truffle": "^5.11.5",
+    "web3-providers-http": "^4.1.0"
+  },
+  "trustedDependencies": [
+    "@apollo/protobufjs",
+    "bufferutil",
+    "es5-ext",
+    "keccak",
+    "leveldown",
+    "secp256k1",
+    "truffle",
+    "utf-8-validate"
+  ]
+}
